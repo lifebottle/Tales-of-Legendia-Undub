@@ -1,6 +1,6 @@
 # Tales-of-Legendia-Undub
 
-True Undub for Tales of Legendia with the second half of the game.
+True Undub for Tales of Legendia, including the second half of the game.
 
 Credits:
 
@@ -67,3 +67,5 @@ So... what happens when we edit the table to use the one loaded by the Japanese 
 Setting a write breakpoint at the start of the table, we find a function that is writing it. A closer look, we see it takes two parameters, a0 and a1. a1 is the destination where the file was written to, and a0 looked like the original compressed file. A quick search for it, and we find it's the first file in the SYS_REG.AFS archive. 
 
 The question now is decompressing and re-compressing it. With a ton of help from Ethanol, we determined it was a zeroed buffer LZSS. We decrypted the file, and the content matched what we saw in the game. Decrypt both NA and JP, find the table, replace NA table with JP table. Re-encrypt, add CPS header back, rebuild the AFS, rebuild the game, and mission accomplished. 😎
+
+(Note: There is a... probably a somewhat decent chance, that the NA script might have moved voice id's around? Maybe? If anyone notices something wrong please report so we can look into it...)
