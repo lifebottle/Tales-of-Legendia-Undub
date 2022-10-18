@@ -16,14 +16,16 @@ So, why does the game still not play Character Quest voices when you do that and
 The answer, this time, is pretty simple. First, we start by looking at the game script files, loaded into memory:
 
 ![image](https://user-images.githubusercontent.com/6155506/196266159-02124af6-98fa-457f-8c82-2575ba78bf1e.png)
+
 That 0x05 at the start here indicates the voice clip index.
 
 The first thing to check - does the script for character quests contain the voice clip id?
 
 ![image](https://user-images.githubusercontent.com/6155506/196266672-f72e4b7b-b56d-4ed6-badd-633ad28d4d05.png)
+
 The answer, with a huge sigh of relief, is-- yes. That 0x2716 is the voice clip id for that line.
 
-Now, the voice clip id is in the script. Why doesn't it play?
+The voice clip id is in the script. Why doesn't it play?
 
 Knowing where the id is being read from, it's super easy to trace and see when the game loads the id, and what it does with it.
 
@@ -66,6 +68,6 @@ So... what happens when we edit the table to use the one loaded by the Japanese 
 
 Setting a write breakpoint at the start of the table, we find a function that is writing it. A closer look, we see it takes two parameters, a0 and a1. a1 is the destination where the file was written to, and a0 looked like the original compressed file. A quick search for it, and we find it's the first file in the SYS_REG.AFS archive. 
 
-The question now is decompressing and re-compressing it. With a ton of help from Ethanol, we determined it was a zeroed buffer LZSS. We decrypted the file, and the content matched what we saw in the game. Decrypt both NA and JP, find the table, replace NA table with JP table. Re-encrypt, add CPS header back, rebuild the AFS, rebuild the game, and mission accomplished. 😎
+The question now is decompressing and re-compressing it. With a ton of help from Ethanol, we determined it was a zeroed buffer LZSS. We decompress the file, and the content matched what we saw in the game. Decompress both NA and JP, find the table, replace NA table with JP table. Re-compress, add CPS header back, rebuild the AFS, rebuild the game, and mission accomplished. 😎
 
-(Note: There is a... probably a somewhat decent chance, that the NA script might have moved voice id's around? Maybe? If anyone notices something wrong please report so we can look into it...)
+(Note: There is a... probably a somewhat decent chance, that the NA script might have moved voice id's around? Maybe? If anyone notices something wrong please report so we can look into it.)
