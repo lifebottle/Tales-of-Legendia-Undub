@@ -1,9 +1,15 @@
 # Tales-of-Legendia-Undub
 
-True Undub for Tales of Legendia, including the second half of the game.
+There are currently two versions available with this repository:
+
+ToL-ReUndub_1.1.7z
+This is a complete Undub of ToL with the original Japanese voices restored for the second half of the game.
+
+ToL-Pundub_1.0.7z
+This is the Partial Undub of ToL with the original Japanese voices restored for the second half of the game, while retaining the English Dub for the first half of the game, within cutscenes and during combat.
 
 Credits:
-
+- The Original Undub Team
 - Julian
 - Trixarian
 - Ethanol
