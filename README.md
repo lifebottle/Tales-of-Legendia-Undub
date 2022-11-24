@@ -3,12 +3,15 @@
 There are currently three patches available with this repository:
 
 ToL-ReUndub_1.2.7z
+
 This is a complete Undub of Tales of Legendia with the original Japanese voices restored for the second half of the game
 
 ToL-Pundub_1.0.7z
+
 This is the Partial Undub of Tales of Legendia with the original Japanese voices restored for the second half of the game while retaining the English Dub for the first half of the game, in cutscenes and during combat
 
 ToL-ReUndub-Fix.7z
+
 This can be used to update your existing copy of Tales of Legendia ReUndub v1.1 to v1.2 without requiring the download and reapplication of the much larger patch
 
 Credits:
