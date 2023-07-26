@@ -1,28 +1,17 @@
 # Tales-of-Legendia-Undub
-There are currently four patches available with this repository:
+There are currently two patches available with this repository:
 
-ToL-ReUndub_1.2.7z
+ToL-ReUndub-1.3.zip
 
 This is a complete Undub of Tales of Legendia with the original Japanese voices restored for the second half of the game
 
-ToL-Pundub_1.1.7z
+ToL-Pundub-1.2.zip
 
-This is the Partial Undub of Tales of Legendia with the original Japanese voices restored for the second half of the game while retaining the English Dub for the first half of the game, in cutscenes and during combat. This version fixes the crash in the Oresoren Village
-
-ToL-ReUndub-Fix.7z
-
-This can be used to update your existing copy of Tales of Legendia ReUndub v1.1 to v1.2 without requiring the download and reapplication of the much larger patch
-
-ToL-PunFix.7z
-
-This can be used to update your existing copy of Tales of Legendia PunDub v1.0 to v1.1 without requiring the download and reapplication of the much larger patch
-
+This is the Partial Undub of Tales of Legendia with the original Japanese voices restored for the second half of the game while retaining the English Dub for the first half of the game, in cutscenes and during combat.
 
 Credits:
-- The Original Undub Team
-- Julian
-- Trixarian
-- Ethanol
+somebody special (for the original Undub),
+Julian, Trixarian and Ethanol
 
 ## Technical Stuff
 Swapping out voice files from English to Japanese is easy. Find the corresponding AFS archive, move it over, copy the corresponding MBS (contains decompressed file sizes), and update the corresponding record in PTN_INFO.BIN. (contains number of files inside AFS archive)
