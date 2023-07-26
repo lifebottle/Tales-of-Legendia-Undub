@@ -11,7 +11,7 @@ This is the Partial Undub of Tales of Legendia with the original Japanese voices
 
 
 Credits:
-- somebody special (for the original Undub),
+- somebody special (for the original Undub)
 - Julian
 - Trixarian
 - Ethanol
