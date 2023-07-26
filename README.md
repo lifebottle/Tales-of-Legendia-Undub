@@ -9,9 +9,12 @@ ToL-Pundub-1.2.zip
 
 This is the Partial Undub of Tales of Legendia with the original Japanese voices restored for the second half of the game while retaining the English Dub for the first half of the game, in cutscenes and during combat.
 
+
 Credits:
-somebody special (for the original Undub),
-Julian, Trixarian and Ethanol
+- somebody special (for the original Undub),
+- Julian
+- Trixarian
+- Ethanol
 
 ## Technical Stuff
 Swapping out voice files from English to Japanese is easy. Find the corresponding AFS archive, move it over, copy the corresponding MBS (contains decompressed file sizes), and update the corresponding record in PTN_INFO.BIN. (contains number of files inside AFS archive)
